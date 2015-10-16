@@ -21,6 +21,34 @@ namespace TestShopWithUs
         }
 
         [TestMethod]
+        public void DiscountFor2ndItem()
+        {
+            Item[] listofItem = new Item[2];
+            listofItem[0] = new Item("1001", "1001.1", 10.00);
+            listofItem[1] = new Item("1001", "1001.1", 100.00);
+
+            order o = new order();
+
+            double totalBill = o.totalbill(listofItem);
+
+            Assert.AreEqual(80, totalBill);
+        }
+
+        [TestMethod]
+        public void DiscountFor2ndItemSameStyle()
+        {
+            Item[] listofItem = new Item[2];
+            listofItem[0] = new Item("1001", "1001.1", 10.00);
+            listofItem[1] = new Item("1001", "1001.2", 100.00);
+
+            order o = new order();
+
+            double totalBill = o.totalbill(listofItem);
+
+            Assert.AreEqual(60, totalBill);
+        }
+
+        [TestMethod]
         public void CountTotalAmountOfPurchase()
         {
             Item[] listofItem = new Item[3];
