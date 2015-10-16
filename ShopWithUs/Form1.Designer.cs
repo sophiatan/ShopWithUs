@@ -178,7 +178,7 @@
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ShopWithUs";
             this.ResumeLayout(false);
             this.PerformLayout();
 
