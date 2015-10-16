@@ -55,16 +55,6 @@ namespace ShopWithUs.Class
             _cost = cost;
         }
 
-        public double CalTotalAmount(Item [] listofItem)
-        {
-            double calTotal = 0.0;
 
-            for (int i = 0; i < listofItem.Count(); i++)
-            {
-                calTotal = calTotal + listofItem[i].cost;
-            }
-
-                return calTotal;
-        }
     }
 }

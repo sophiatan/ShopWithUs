@@ -27,5 +27,17 @@ namespace ShopWithUs.Class
 
             return finalbill;
         }
+
+        public double CalTotalAmountWithOutDis(Item[] listofItem)
+        {
+            double calTotal = 0.0;
+
+            for (int i = 0; i < listofItem.Count(); i++)
+            {
+                calTotal = calTotal + listofItem[i].cost;
+            }
+
+            return calTotal;
+        }
     }
 }

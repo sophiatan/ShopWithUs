@@ -28,7 +28,11 @@ namespace TestShopWithUs
             listofItem[1] = new Item("1001", "1001.2", 100.00);
             listofItem[2] = new Item("1001", "1001.3", 100.00);
             
-            
+            order o = new order();
+
+            double calTotal = o.CalTotalAmountWithOutDis(listofItem);
+
+            Assert.AreEqual(300, calTotal);
         }
     }
 }
